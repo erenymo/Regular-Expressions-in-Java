@@ -22,7 +22,7 @@ public class TranscriptParser {
                 Unweighted[)]\\s+(?<unweightedGPA>[\\d\\.]+)\\b.* # Grab cumulative gpa unweighted
 
                 """;
-        Pattern pat = Pattern.compile(regex, Pattern.DOTALL | Pattern.COMMENTS);  // .DOTALL = nokta konuldugu zaman tüm karakterleri (new line da dahil) kapsar.
+        Pattern pat = Pattern.compile(regex, Pattern.DOTALL | Pattern.COMMENTS);
        Matcher mat = pat.matcher(transcript);
        if (mat.matches()) {
            System.out.println("Student Number : "+mat.group("studentNum"));
